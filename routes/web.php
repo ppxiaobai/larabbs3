@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 // 网站首页
 Route::get('/', 'PagesController@root')->name('root');
 
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
+
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -54,3 +56,5 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 
 // 通知列表
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+
+
