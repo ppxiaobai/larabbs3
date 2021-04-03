@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // 网站首页
-Route::get('/', 'PagesController@root')->name('root');
+Route::get('/', 'TopicsController@index')->name('root');
 
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 
